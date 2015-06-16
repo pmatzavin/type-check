@@ -1,15 +1,15 @@
 {
-  "name": "type-check",
+  "name": "is-check",
   "version": "1.0.0",
   "description": "Check if the given value is of a specific type.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "should": "^6.0.3"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "mocha -R spec test\\**.js",
     "testUnix": "mocha -R spec test/**.js"
