@@ -1,4 +1,4 @@
-# is-type
+# is-check
 
 Check if the given value is of a specific type.
 
@@ -10,13 +10,13 @@ Abstract the usage of "typeof === '...'".
 ## Installation
 
 ```
-npm install is-type
+npm install is-check
 ```
 
 ## Module Usage
 
 ```
-var check = require('is-type');
+var check = require('is-check');
 ```
 
 ```
@@ -87,25 +87,25 @@ npm testUNIX
 isArray([]) should be true.
 
 ```js
-typeChecker.isArray([]).should.be.ok;
+check.isArray([]).should.be.ok;
 ```
 
 isArray([1]) should be true.
 
 ```js
-typeChecker.isArray([1]).should.be.ok;
+check.isArray([1]).should.be.ok;
 ```
 
 isArray([new Array()]) should be true.
 
 ```js
-typeChecker.isArray([new Array()]).should.be.ok;
+check.isArray([new Array()]).should.be.ok;
 ```
 
 isArray([Array.prototype]) should be true.
 
 ```js
-typeChecker.isArray([Array.prototype]).should.be.ok;
+check.isArray([Array.prototype]).should.be.ok;
 ```
 
 <a name="function-isarray-returns-false-"></a>
@@ -113,127 +113,127 @@ typeChecker.isArray([Array.prototype]).should.be.ok;
 isArray(37) should be false.
 
 ```js
-typeChecker.isArray(37).should.not.be.ok;
+check.isArray(37).should.not.be.ok;
 ```
 
 isArray(3.14) should be false.
 
 ```js
-typeChecker.isArray(3.14).should.not.be.ok;
+check.isArray(3.14).should.not.be.ok;
 ```
 
 isArray(Math.LN2) should be false.
 
 ```js
-typeChecker.isArray(Math.LN2).should.not.be.ok;
+check.isArray(Math.LN2).should.not.be.ok;
 ```
 
 isArray(Infinity) should be false.
 
 ```js
-typeChecker.isArray(Infinity).should.not.be.ok;
+check.isArray(Infinity).should.not.be.ok;
 ```
 
 isArray(Number(1)) should be false.
 
 ```js
-typeChecker.isArray(Number(1)).should.not.be.ok;
+check.isArray(Number(1)).should.not.be.ok;
 ```
 
 isArray(NaN) should be false.
 
 ```js
-typeChecker.isArray(NaN).should.not.be.ok;
+check.isArray(NaN).should.not.be.ok;
 ```
 
 isArray("") should be false.
 
 ```js
-typeChecker.isArray("").should.not.be.ok;
+check.isArray("").should.not.be.ok;
 ```
 
 isArray("bla") should be false.
 
 ```js
-typeChecker.isArray("bla").should.not.be.ok;
+check.isArray("bla").should.not.be.ok;
 ```
 
 isArray(typeof 1) should be false.
 
 ```js
-typeChecker.isArray(typeof 1).should.not.be.ok;
+check.isArray(typeof 1).should.not.be.ok;
 ```
 
 isArray("abc") should be false.
 
 ```js
-typeChecker.isArray("abc").should.not.be.ok;
+check.isArray("abc").should.not.be.ok;
 ```
 
 isArray(false) should be false.
 
 ```js
-typeChecker.isArray(false).should.not.be.ok;
+check.isArray(false).should.not.be.ok;
 ```
 
 isArray(false) should be false.
 
 ```js
-typeChecker.isArray(false).should.not.be.ok;
+check.isArray(false).should.not.be.ok;
 ```
 
 isArray(Boolean(false)) should be false.
 
 ```js
-typeChecker.isArray(Boolean(false)).should.not.be.ok;
+check.isArray(Boolean(false)).should.not.be.ok;
 ```
 
 isArray(Boolean(false)) should be false.
 
 ```js
-typeChecker.isArray(Boolean(false)).should.not.be.ok;
+check.isArray(Boolean(false)).should.not.be.ok;
 ```
 
 isArray( new Boolean(false)) should be false.
 
 ```js
-typeChecker.isArray(Boolean( new Boolean(false))).should.not.be.ok;
+check.isArray(Boolean( new Boolean(false))).should.not.be.ok;
 ```
 
 isArray(undefined) should be false.
 
 ```js
-typeChecker.isArray(undefined).should.not.be.ok;
+check.isArray(undefined).should.not.be.ok;
 ```
 
 isArray(null) should be false.
 
 ```js
-typeChecker.isArray(null).should.not.be.ok;
+check.isArray(null).should.not.be.ok;
 ```
 
 isArray({a:1}) should be false.
 
 ```js
-typeChecker.isArray({a:1}).should.not.be.ok;
+check.isArray({a:1}).should.not.be.ok;
 ```
 
 isArray(new Date()) should be false.
 
 ```js
-typeChecker.isArray(new Date()).should.not.be.ok;
+check.isArray(new Date()).should.not.be.ok;
 ```
 
 isArray(function(){}) should be false.
 
 ```js
-typeChecker.isArray(function(){}).should.not.be.ok;
+check.isArray(function(){}).should.not.be.ok;
 ```
 
 isArray(Math.sin) should be false.
 
 ```js
-typeChecker.isArray(Math.sin).should.not.be.ok;
+check.isArray(Math.sin).should.not.be.ok;
 ```
 
 <a name="function-isboolean"></a>
@@ -243,25 +243,25 @@ typeChecker.isArray(Math.sin).should.not.be.ok;
 isBoolean(true) should be true.
 
 ```js
-typeChecker.isBoolean(true).should.be.ok;
+check.isBoolean(true).should.be.ok;
 ```
 
 isBoolean(false) should be true.
 
 ```js
-typeChecker.isBoolean(false).should.be.ok;
+check.isBoolean(false).should.be.ok;
 ```
 
 isBoolean(Boolean(true)) should be true.
 
 ```js
-typeChecker.isBoolean(Boolean(true)).should.be.ok;
+check.isBoolean(Boolean(true)).should.be.ok;
 ```
 
 isBoolean(Boolean(false)) should be true.
 
 ```js
-typeChecker.isBoolean(Boolean(false)).should.be.ok;
+check.isBoolean(Boolean(false)).should.be.ok;
 ```
 
 <a name="function-isboolean-returns-false-"></a>
@@ -269,103 +269,103 @@ typeChecker.isBoolean(Boolean(false)).should.be.ok;
 isBoolean(NaN) should be false.
 
 ```js
-typeChecker.isBoolean(NaN).should.not.be.ok;
+check.isBoolean(NaN).should.not.be.ok;
 ```
 
 isBoolean(undefined) should be false.
 
 ```js
-typeChecker.isBoolean(undefined).should.not.be.ok;
+check.isBoolean(undefined).should.not.be.ok;
 ```
 
 isBoolean(null) should be false.
 
 ```js
-typeChecker.isBoolean(null).should.not.be.ok;
+check.isBoolean(null).should.not.be.ok;
 ```
 
 isBoolean({a:1}) should be false.
 
 ```js
-typeChecker.isBoolean({a:1}).should.not.be.ok;
+check.isBoolean({a:1}).should.not.be.ok;
 ```
 
 isBoolean(new Date()) should be false.
 
 ```js
-typeChecker.isBoolean(new Date()).should.not.be.ok;
+check.isBoolean(new Date()).should.not.be.ok;
 ```
 
 isBoolean(function(){}) should be false.
 
 ```js
-typeChecker.isBoolean(function(){}).should.not.be.ok;
+check.isBoolean(function(){}).should.not.be.ok;
 ```
 
 isBoolean(Math.sin) should be false.
 
 ```js
-typeChecker.isBoolean(Math.sin).should.not.be.ok;
+check.isBoolean(Math.sin).should.not.be.ok;
 ```
 
 isBoolean([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isBoolean([1, 2, 4]).should.not.be.ok;
+check.isBoolean([1, 2, 4]).should.not.be.ok;
 ```
 
 isBoolean(37) should be false.
 
 ```js
-typeChecker.isBoolean(37).should.not.be.ok;
+check.isBoolean(37).should.not.be.ok;
 ```
 
 isBoolean(3.14) should be false.
 
 ```js
-typeChecker.isBoolean(3.14).should.not.be.ok;
+check.isBoolean(3.14).should.not.be.ok;
 ```
 
 isBoolean(Math.LN2) should be false.
 
 ```js
-typeChecker.isBoolean(Math.LN2).should.not.be.ok;
+check.isBoolean(Math.LN2).should.not.be.ok;
 ```
 
 isBoolean(Infinity) should be false.
 
 ```js
-typeChecker.isBoolean(Infinity).should.not.be.ok;
+check.isBoolean(Infinity).should.not.be.ok;
 ```
 
 isBoolean(Number(1)) should be false.
 
 ```js
-typeChecker.isBoolean(Number(1)).should.not.be.ok;
+check.isBoolean(Number(1)).should.not.be.ok;
 ```
 
 isBoolean("") should be false.
 
 ```js
-typeChecker.isBoolean("").should.not.be.ok;
+check.isBoolean("").should.not.be.ok;
 ```
 
 isBoolean("bla") should be false.
 
 ```js
-typeChecker.isBoolean("bla").should.not.be.ok;
+check.isBoolean("bla").should.not.be.ok;
 ```
 
 isBoolean(typeof 1) should be false.
 
 ```js
-typeChecker.isBoolean(typeof 1).should.not.be.ok;
+check.isBoolean(typeof 1).should.not.be.ok;
 ```
 
 isBoolean("abc") should be false.
 
 ```js
-typeChecker.isBoolean("abc").should.not.be.ok;
+check.isBoolean("abc").should.not.be.ok;
 ```
 
 <a name="function-isfunction"></a>
@@ -375,13 +375,13 @@ typeChecker.isBoolean("abc").should.not.be.ok;
 isFunction(function(){}) should be true.
 
 ```js
-typeChecker.isFunction(function(){}).should.be.ok;
+check.isFunction(function(){}).should.be.ok;
 ```
 
 isFunction(Math.sin) should be true.
 
 ```js
-typeChecker.isFunction(Math.sin).should.be.ok;
+check.isFunction(Math.sin).should.be.ok;
 ```
 
 <a name="function-isfunction-returns-false-"></a>
@@ -389,121 +389,121 @@ typeChecker.isFunction(Math.sin).should.be.ok;
 isFunction(37) should be false.
 
 ```js
-typeChecker.isFunction(37).should.not.be.ok;
+check.isFunction(37).should.not.be.ok;
 ```
 
 isFunction(3.14) should be false.
 
 ```js
-typeChecker.isFunction(3.14).should.not.be.ok;
+check.isFunction(3.14).should.not.be.ok;
 ```
 
 isFunction(Math.LN2) should be false.
 
 ```js
-typeChecker.isFunction(Math.LN2).should.not.be.ok;
+check.isFunction(Math.LN2).should.not.be.ok;
 ```
 
 isFunction(Infinity) should be false.
 
 ```js
-typeChecker.isFunction(Infinity).should.not.be.ok;
+check.isFunction(Infinity).should.not.be.ok;
 ```
 
 isFunction(Number(1)) should be false.
 
 ```js
-typeChecker.isFunction(Number(1)).should.not.be.ok;
+check.isFunction(Number(1)).should.not.be.ok;
 ```
 
 isFunction(NaN) should be false.
 
 ```js
-typeChecker.isFunction(NaN).should.not.be.ok;
+check.isFunction(NaN).should.not.be.ok;
 ```
 
 isFunction("") should be false.
 
 ```js
-typeChecker.isFunction("").should.not.be.ok;
+check.isFunction("").should.not.be.ok;
 ```
 
 isFunction("bla") should be false.
 
 ```js
-typeChecker.isFunction("bla").should.not.be.ok;
+check.isFunction("bla").should.not.be.ok;
 ```
 
 isFunction(typeof 1) should be false.
 
 ```js
-typeChecker.isFunction(typeof 1).should.not.be.ok;
+check.isFunction(typeof 1).should.not.be.ok;
 ```
 
 isFunction("abc") should be false.
 
 ```js
-typeChecker.isFunction("abc").should.not.be.ok;
+check.isFunction("abc").should.not.be.ok;
 ```
 
 isFunction(true) should be false.
 
 ```js
-typeChecker.isFunction(true).should.not.be.ok;
+check.isFunction(true).should.not.be.ok;
 ```
 
 isFunction(false) should be false.
 
 ```js
-typeChecker.isFunction(false).should.not.be.ok;
+check.isFunction(false).should.not.be.ok;
 ```
 
 isFunction(Boolean(true)) should be false.
 
 ```js
-typeChecker.isFunction(Boolean(true)).should.not.be.ok;
+check.isFunction(Boolean(true)).should.not.be.ok;
 ```
 
 isFunction(Boolean(false)) should be false.
 
 ```js
-typeChecker.isFunction(Boolean(false)).should.not.be.ok;
+check.isFunction(Boolean(false)).should.not.be.ok;
 ```
 
 isFunction( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isFunction(Boolean( new Boolean(true))).should.not.be.ok;
+check.isFunction(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isFunction(undefined) should be false.
 
 ```js
-typeChecker.isFunction(undefined).should.not.be.ok;
+check.isFunction(undefined).should.not.be.ok;
 ```
 
 isFunction(null) should be false.
 
 ```js
-typeChecker.isFunction(null).should.not.be.ok;
+check.isFunction(null).should.not.be.ok;
 ```
 
 isFunction({a:1}) should be false.
 
 ```js
-typeChecker.isFunction({a:1}).should.not.be.ok;
+check.isFunction({a:1}).should.not.be.ok;
 ```
 
 isFunction(new Date()) should be false.
 
 ```js
-typeChecker.isFunction(new Date()).should.not.be.ok;
+check.isFunction(new Date()).should.not.be.ok;
 ```
 
 isFunction([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isFunction([1, 2, 4]).should.not.be.ok;
+check.isFunction([1, 2, 4]).should.not.be.ok;
 ```
 
 <a name="function-isnill"></a>
@@ -513,13 +513,13 @@ typeChecker.isFunction([1, 2, 4]).should.not.be.ok;
 isNil(null) should be true.
 
 ```js
-typeChecker.isNil(null).should.be.ok;
+check.isNil(null).should.be.ok;
 ```
 
 isNil(undefined) should be true.
 
 ```js
-typeChecker.isNil(undefined).should.be.ok;
+check.isNil(undefined).should.be.ok;
 ```
 
 <a name="function-isnill-returns-false-"></a>
@@ -527,121 +527,121 @@ typeChecker.isNil(undefined).should.be.ok;
 isNil(NaN) should be false.
 
 ```js
-typeChecker.isNil(NaN).should.not.be.ok;
+check.isNil(NaN).should.not.be.ok;
 ```
 
 isNil("") should be false.
 
 ```js
-typeChecker.isNil("").should.not.be.ok;
+check.isNil("").should.not.be.ok;
 ```
 
 isNil("bla") should be false.
 
 ```js
-typeChecker.isNil("bla").should.not.be.ok;
+check.isNil("bla").should.not.be.ok;
 ```
 
 isNil(typeof 1) should be false.
 
 ```js
-typeChecker.isNil(typeof 1).should.not.be.ok;
+check.isNil(typeof 1).should.not.be.ok;
 ```
 
 isNil("abc") should be false.
 
 ```js
-typeChecker.isNil("abc").should.not.be.ok;
+check.isNil("abc").should.not.be.ok;
 ```
 
 isNil(true) should be false.
 
 ```js
-typeChecker.isNil(true).should.not.be.ok;
+check.isNil(true).should.not.be.ok;
 ```
 
 isNil(false) should be false.
 
 ```js
-typeChecker.isNil(false).should.not.be.ok;
+check.isNil(false).should.not.be.ok;
 ```
 
 isNil(Boolean(true)) should be false.
 
 ```js
-typeChecker.isNil(Boolean(true)).should.not.be.ok;
+check.isNil(Boolean(true)).should.not.be.ok;
 ```
 
 isNil(Boolean(false)) should be false.
 
 ```js
-typeChecker.isNil(Boolean(false)).should.not.be.ok;
+check.isNil(Boolean(false)).should.not.be.ok;
 ```
 
 isNil( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isNil(Boolean( new Boolean(true))).should.not.be.ok;
+check.isNil(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isNil({a:1}) should be false.
 
 ```js
-typeChecker.isNil({a:1}).should.not.be.ok;
+check.isNil({a:1}).should.not.be.ok;
 ```
 
 isNil(new Date()) should be false.
 
 ```js
-typeChecker.isNil(new Date()).should.not.be.ok;
+check.isNil(new Date()).should.not.be.ok;
 ```
 
 isNil(function(){}) should be false.
 
 ```js
-typeChecker.isNil(function(){}).should.not.be.ok;
+check.isNil(function(){}).should.not.be.ok;
 ```
 
 isNil(Math.sin) should be false.
 
 ```js
-typeChecker.isNil(Math.sin).should.not.be.ok;
+check.isNil(Math.sin).should.not.be.ok;
 ```
 
 isNil([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isNil([1, 2, 4]).should.not.be.ok;
+check.isNil([1, 2, 4]).should.not.be.ok;
 ```
 
 isNil(37) should be false.
 
 ```js
-typeChecker.isNil(37).should.not.be.ok;
+check.isNil(37).should.not.be.ok;
 ```
 
 isNil(3.14) should be false.
 
 ```js
-typeChecker.isNil(3.14).should.not.be.ok;
+check.isNil(3.14).should.not.be.ok;
 ```
 
 isNil(Math.LN2) should be false.
 
 ```js
-typeChecker.isNil(Math.LN2).should.not.be.ok;
+check.isNil(Math.LN2).should.not.be.ok;
 ```
 
 isNil(Infinity) should be false.
 
 ```js
-typeChecker.isNil(Infinity).should.not.be.ok;
+check.isNil(Infinity).should.not.be.ok;
 ```
 
 isNil(Number(1)) should be false.
 
 ```js
-typeChecker.isNil(Number(1)).should.not.be.ok;
+check.isNil(Number(1)).should.not.be.ok;
 ```
 
 <a name="function-isnull"></a>
@@ -651,7 +651,7 @@ typeChecker.isNil(Number(1)).should.not.be.ok;
 isNull(null) should be true.
 
 ```js
-typeChecker.isNull(null).should.be.ok;
+check.isNull(null).should.be.ok;
 ```
 
 <a name="function-isnull-returns-false-"></a>
@@ -659,127 +659,127 @@ typeChecker.isNull(null).should.be.ok;
 isNull(37) should be false.
 
 ```js
-typeChecker.isNull(37).should.not.be.ok;
+check.isNull(37).should.not.be.ok;
 ```
 
 isNull(3.14) should be false.
 
 ```js
-typeChecker.isNull(3.14).should.not.be.ok;
+check.isNull(3.14).should.not.be.ok;
 ```
 
 isNull(Math.LN2) should be false.
 
 ```js
-typeChecker.isNull(Math.LN2).should.not.be.ok;
+check.isNull(Math.LN2).should.not.be.ok;
 ```
 
 isNull(Infinity) should be false.
 
 ```js
-typeChecker.isNull(Infinity).should.not.be.ok;
+check.isNull(Infinity).should.not.be.ok;
 ```
 
 isNull(Number(1)) should be false.
 
 ```js
-typeChecker.isNull(Number(1)).should.not.be.ok;
+check.isNull(Number(1)).should.not.be.ok;
 ```
 
 isNull(NaN) should be false.
 
 ```js
-typeChecker.isNull(NaN).should.not.be.ok;
+check.isNull(NaN).should.not.be.ok;
 ```
 
 isNull("") should be false.
 
 ```js
-typeChecker.isNull("").should.not.be.ok;
+check.isNull("").should.not.be.ok;
 ```
 
 isNull("bla") should be false.
 
 ```js
-typeChecker.isNull("bla").should.not.be.ok;
+check.isNull("bla").should.not.be.ok;
 ```
 
 isNull(typeof 1) should be false.
 
 ```js
-typeChecker.isNull(typeof 1).should.not.be.ok;
+check.isNull(typeof 1).should.not.be.ok;
 ```
 
 isNull("abc") should be false.
 
 ```js
-typeChecker.isNull("abc").should.not.be.ok;
+check.isNull("abc").should.not.be.ok;
 ```
 
 isNull(true) should be false.
 
 ```js
-typeChecker.isNull(true).should.not.be.ok;
+check.isNull(true).should.not.be.ok;
 ```
 
 isNull(false) should be false.
 
 ```js
-typeChecker.isNull(false).should.not.be.ok;
+check.isNull(false).should.not.be.ok;
 ```
 
 isNull(Boolean(true)) should be false.
 
 ```js
-typeChecker.isNull(Boolean(true)).should.not.be.ok;
+check.isNull(Boolean(true)).should.not.be.ok;
 ```
 
 isNull(Boolean(false)) should be false.
 
 ```js
-typeChecker.isNull(Boolean(false)).should.not.be.ok;
+check.isNull(Boolean(false)).should.not.be.ok;
 ```
 
 isNull( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isNull(Boolean( new Boolean(true))).should.not.be.ok;
+check.isNull(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isNull(undefined) should be false.
 
 ```js
-typeChecker.isNull(undefined).should.not.be.ok;
+check.isNull(undefined).should.not.be.ok;
 ```
 
 isNull({a:1}) should be false.
 
 ```js
-typeChecker.isNull({a:1}).should.not.be.ok;
+check.isNull({a:1}).should.not.be.ok;
 ```
 
 isNull(new Date()) should be false.
 
 ```js
-typeChecker.isNull(new Date()).should.not.be.ok;
+check.isNull(new Date()).should.not.be.ok;
 ```
 
 isNull(function(){}) should be false.
 
 ```js
-typeChecker.isNull(function(){}).should.not.be.ok;
+check.isNull(function(){}).should.not.be.ok;
 ```
 
 isNull(Math.sin) should be false.
 
 ```js
-typeChecker.isNull(Math.sin).should.not.be.ok;
+check.isNull(Math.sin).should.not.be.ok;
 ```
 
 isNull([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isNull([1, 2, 4]).should.not.be.ok;
+check.isNull([1, 2, 4]).should.not.be.ok;
 ```
 
 <a name="function-isnumber"></a>
@@ -789,31 +789,31 @@ typeChecker.isNull([1, 2, 4]).should.not.be.ok;
 isNumber(37) should be true.
 
 ```js
-typeChecker.isNumber(37).should.be.ok;
+check.isNumber(37).should.be.ok;
 ```
 
 isNumber(3.14) should be true.
 
 ```js
-typeChecker.isNumber(3.14).should.be.ok;
+check.isNumber(3.14).should.be.ok;
 ```
 
 isNumber(Math.LN2) should be true.
 
 ```js
-typeChecker.isNumber(Math.LN2).should.be.ok;
+check.isNumber(Math.LN2).should.be.ok;
 ```
 
 isNumber(Infinity) should be true.
 
 ```js
-typeChecker.isNumber(Infinity).should.be.ok;
+check.isNumber(Infinity).should.be.ok;
 ```
 
 isNumber(Number(1)) should be true.
 
 ```js
-typeChecker.isNumber(Number(1)).should.be.ok;
+check.isNumber(Number(1)).should.be.ok;
 ```
 
 <a name="function-isnumber-returns-false-"></a>
@@ -821,103 +821,103 @@ typeChecker.isNumber(Number(1)).should.be.ok;
 isNumber(NaN) should be false.
 
 ```js
-typeChecker.isNumber(NaN).should.not.be.ok;
+check.isNumber(NaN).should.not.be.ok;
 ```
 
 isNumber("") should be false.
 
 ```js
-typeChecker.isNumber("").should.not.be.ok;
+check.isNumber("").should.not.be.ok;
 ```
 
 isNumber("bla") should be false.
 
 ```js
-typeChecker.isNumber("bla").should.not.be.ok;
+check.isNumber("bla").should.not.be.ok;
 ```
 
 isNumber(typeof 1) should be false.
 
 ```js
-typeChecker.isNumber(typeof 1).should.not.be.ok;
+check.isNumber(typeof 1).should.not.be.ok;
 ```
 
 isNumber("abc") should be false.
 
 ```js
-typeChecker.isNumber("abc").should.not.be.ok;
+check.isNumber("abc").should.not.be.ok;
 ```
 
 isNumber(true) should be false.
 
 ```js
-typeChecker.isNumber(true).should.not.be.ok;
+check.isNumber(true).should.not.be.ok;
 ```
 
 isNumber(false) should be false.
 
 ```js
-typeChecker.isNumber(false).should.not.be.ok;
+check.isNumber(false).should.not.be.ok;
 ```
 
 isNumber(Boolean(true)) should be false.
 
 ```js
-typeChecker.isNumber(Boolean(true)).should.not.be.ok;
+check.isNumber(Boolean(true)).should.not.be.ok;
 ```
 
 isNumber(Boolean(false)) should be false.
 
 ```js
-typeChecker.isNumber(Boolean(false)).should.not.be.ok;
+check.isNumber(Boolean(false)).should.not.be.ok;
 ```
 
 isNumber( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isNumber(Boolean( new Boolean(true))).should.not.be.ok;
+check.isNumber(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isNumber(undefined) should be false.
 
 ```js
-typeChecker.isNumber(undefined).should.not.be.ok;
+check.isNumber(undefined).should.not.be.ok;
 ```
 
 isNumber(null) should be false.
 
 ```js
-typeChecker.isNumber(null).should.not.be.ok;
+check.isNumber(null).should.not.be.ok;
 ```
 
 isNumber({a:1}) should be false.
 
 ```js
-typeChecker.isNumber({a:1}).should.not.be.ok;
+check.isNumber({a:1}).should.not.be.ok;
 ```
 
 isNumber(new Date()) should be false.
 
 ```js
-typeChecker.isNumber(new Date()).should.not.be.ok;
+check.isNumber(new Date()).should.not.be.ok;
 ```
 
 isNumber(function(){}) should be false.
 
 ```js
-typeChecker.isNumber(function(){}).should.not.be.ok;
+check.isNumber(function(){}).should.not.be.ok;
 ```
 
 isNumber(Math.sin) should be false.
 
 ```js
-typeChecker.isNumber(Math.sin).should.not.be.ok;
+check.isNumber(Math.sin).should.not.be.ok;
 ```
 
 isNumber([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isNumber([1, 2, 4]).should.not.be.ok;
+check.isNumber([1, 2, 4]).should.not.be.ok;
 ```
 
 <a name="function-isobject"></a>
@@ -927,19 +927,19 @@ typeChecker.isNumber([1, 2, 4]).should.not.be.ok;
 isObject({a:1}) should be true.
 
 ```js
-typeChecker.isObject({a:1}).should.be.ok;
+check.isObject({a:1}).should.be.ok;
 ```
 
 isObject(new Date()) should be true.
 
 ```js
-typeChecker.isObject(new Date()).should.be.ok;
+check.isObject(new Date()).should.be.ok;
 ```
 
 isObject(new Boolean(true)) should be true.
 
 ```js
-typeChecker.isObject(new Boolean(true)).should.be.ok;
+check.isObject(new Boolean(true)).should.be.ok;
 ```
 
 <a name="function-isobject-returns-false-"></a>
@@ -947,121 +947,121 @@ typeChecker.isObject(new Boolean(true)).should.be.ok;
 isObject(37) should be false.
 
 ```js
-typeChecker.isObject(37).should.not.be.ok;
+check.isObject(37).should.not.be.ok;
 ```
 
 isObject(3.14) should be false.
 
 ```js
-typeChecker.isObject(3.14).should.not.be.ok;
+check.isObject(3.14).should.not.be.ok;
 ```
 
 isObject(Math.LN2) should be false.
 
 ```js
-typeChecker.isObject(Math.LN2).should.not.be.ok;
+check.isObject(Math.LN2).should.not.be.ok;
 ```
 
 isObject(Infinity) should be false.
 
 ```js
-typeChecker.isObject(Infinity).should.not.be.ok;
+check.isObject(Infinity).should.not.be.ok;
 ```
 
 isObject(Number(1)) should be false.
 
 ```js
-typeChecker.isObject(Number(1)).should.not.be.ok;
+check.isObject(Number(1)).should.not.be.ok;
 ```
 
 isObject(NaN) should be false.
 
 ```js
-typeChecker.isObject(NaN).should.not.be.ok;
+check.isObject(NaN).should.not.be.ok;
 ```
 
 isObject("") should be false.
 
 ```js
-typeChecker.isObject("").should.not.be.ok;
+check.isObject("").should.not.be.ok;
 ```
 
 isObject("bla") should be false.
 
 ```js
-typeChecker.isObject("bla").should.not.be.ok;
+check.isObject("bla").should.not.be.ok;
 ```
 
 isObject(typeof 1) should be false.
 
 ```js
-typeChecker.isObject(typeof 1).should.not.be.ok;
+check.isObject(typeof 1).should.not.be.ok;
 ```
 
 isObject("abc") should be false.
 
 ```js
-typeChecker.isObject("abc").should.not.be.ok;
+check.isObject("abc").should.not.be.ok;
 ```
 
 isObject(true) should be false.
 
 ```js
-typeChecker.isObject(true).should.not.be.ok;
+check.isObject(true).should.not.be.ok;
 ```
 
 isObject(false) should be false.
 
 ```js
-typeChecker.isObject(false).should.not.be.ok;
+check.isObject(false).should.not.be.ok;
 ```
 
 isObject(Boolean(true)) should be false.
 
 ```js
-typeChecker.isObject(Boolean(true)).should.not.be.ok;
+check.isObject(Boolean(true)).should.not.be.ok;
 ```
 
 isObject(Boolean(false)) should be false.
 
 ```js
-typeChecker.isObject(Boolean(false)).should.not.be.ok;
+check.isObject(Boolean(false)).should.not.be.ok;
 ```
 
 isObject( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isObject(Boolean( new Boolean(true))).should.not.be.ok;
+check.isObject(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isObject(undefined) should be false.
 
 ```js
-typeChecker.isObject(undefined).should.not.be.ok;
+check.isObject(undefined).should.not.be.ok;
 ```
 
 isObject(null) should be false.
 
 ```js
-typeChecker.isObject(null).should.not.be.ok;
+check.isObject(null).should.not.be.ok;
 ```
 
 isObject(function(){}) should be false.
 
 ```js
-typeChecker.isObject(function(){}).should.not.be.ok;
+check.isObject(function(){}).should.not.be.ok;
 ```
 
 isObject(Math.sin) should be false.
 
 ```js
-typeChecker.isObject(Math.sin).should.not.be.ok;
+check.isObject(Math.sin).should.not.be.ok;
 ```
 
 isObject([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isObject([1, 2, 4]).should.not.be.ok;
+check.isObject([1, 2, 4]).should.not.be.ok;
 ```
 
 <a name="function-isstring"></a>
@@ -1071,25 +1071,25 @@ typeChecker.isObject([1, 2, 4]).should.not.be.ok;
 isString("") should be true.
 
 ```js
-typeChecker.isString("").should.be.ok;
+check.isString("").should.be.ok;
 ```
 
 isString("bla") should be true.
 
 ```js
-typeChecker.isString("bla").should.be.ok;
+check.isString("bla").should.be.ok;
 ```
 
 isString(typeof 1) should be true.
 
 ```js
-typeChecker.isString(typeof 1).should.be.ok;
+check.isString(typeof 1).should.be.ok;
 ```
 
 isString("abc") should be true.
 
 ```js
-typeChecker.isString("abc").should.be.ok;
+check.isString("abc").should.be.ok;
 ```
 
 <a name="function-isstring-returns-false-"></a>
@@ -1097,109 +1097,109 @@ typeChecker.isString("abc").should.be.ok;
 isString(NaN) should be false.
 
 ```js
-typeChecker.isString(NaN).should.not.be.ok;
+check.isString(NaN).should.not.be.ok;
 ```
 
 isString(true) should be false.
 
 ```js
-typeChecker.isString(true).should.not.be.ok;
+check.isString(true).should.not.be.ok;
 ```
 
 isString(false) should be false.
 
 ```js
-typeChecker.isString(false).should.not.be.ok;
+check.isString(false).should.not.be.ok;
 ```
 
 isString(Boolean(true)) should be false.
 
 ```js
-typeChecker.isString(Boolean(true)).should.not.be.ok;
+check.isString(Boolean(true)).should.not.be.ok;
 ```
 
 isString(Boolean(false)) should be false.
 
 ```js
-typeChecker.isString(Boolean(false)).should.not.be.ok;
+check.isString(Boolean(false)).should.not.be.ok;
 ```
 
 isString( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isString(Boolean( new Boolean(true))).should.not.be.ok;
+check.isString(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isString(undefined) should be false.
 
 ```js
-typeChecker.isString(undefined).should.not.be.ok;
+check.isString(undefined).should.not.be.ok;
 ```
 
 isString(null) should be false.
 
 ```js
-typeChecker.isString(null).should.not.be.ok;
+check.isString(null).should.not.be.ok;
 ```
 
 isString({a:1}) should be false.
 
 ```js
-typeChecker.isString({a:1}).should.not.be.ok;
+check.isString({a:1}).should.not.be.ok;
 ```
 
 isString(new Date()) should be false.
 
 ```js
-typeChecker.isString(new Date()).should.not.be.ok;
+check.isString(new Date()).should.not.be.ok;
 ```
 
 isString(function(){}) should be false.
 
 ```js
-typeChecker.isString(function(){}).should.not.be.ok;
+check.isString(function(){}).should.not.be.ok;
 ```
 
 isString(Math.sin) should be false.
 
 ```js
-typeChecker.isString(Math.sin).should.not.be.ok;
+check.isString(Math.sin).should.not.be.ok;
 ```
 
 isString([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isString([1, 2, 4]).should.not.be.ok;
+check.isString([1, 2, 4]).should.not.be.ok;
 ```
 
 isString(37) should be false.
 
 ```js
-typeChecker.isString(37).should.not.be.ok;
+check.isString(37).should.not.be.ok;
 ```
 
 isString(3.14) should be false.
 
 ```js
-typeChecker.isString(3.14).should.not.be.ok;
+check.isString(3.14).should.not.be.ok;
 ```
 
 isString(Math.LN2) should be false.
 
 ```js
-typeChecker.isString(Math.LN2).should.not.be.ok;
+check.isString(Math.LN2).should.not.be.ok;
 ```
 
 isString(Infinity) should be false.
 
 ```js
-typeChecker.isString(Infinity).should.not.be.ok;
+check.isString(Infinity).should.not.be.ok;
 ```
 
 isString(Number(1)) should be false.
 
 ```js
-typeChecker.isString(Number(1)).should.not.be.ok;
+check.isString(Number(1)).should.not.be.ok;
 ```
 
 <a name="function-isundefined"></a>
@@ -1209,7 +1209,7 @@ typeChecker.isString(Number(1)).should.not.be.ok;
 isUndefined(undefined) should be true.
 
 ```js
-typeChecker.isUndefined(undefined).should.be.ok;
+check.isUndefined(undefined).should.be.ok;
 ```
 
 <a name="function-isundefined-returns-false-"></a>
@@ -1217,127 +1217,127 @@ typeChecker.isUndefined(undefined).should.be.ok;
 isUndefined(37) should be false.
 
 ```js
-typeChecker.isUndefined(37).should.not.be.ok;
+check.isUndefined(37).should.not.be.ok;
 ```
 
 isUndefined(3.14) should be falsw.
 
 ```js
-typeChecker.isUndefined(3.14).should.not.be.ok;
+check.isUndefined(3.14).should.not.be.ok;
 ```
 
 isUndefined(Math.LN2) should be false.
 
 ```js
-typeChecker.isUndefined(Math.LN2).should.not.be.ok;
+check.isUndefined(Math.LN2).should.not.be.ok;
 ```
 
 isUndefined(Infinity) should be false.
 
 ```js
-typeChecker.isUndefined(Infinity).should.not.be.ok;
+check.isUndefined(Infinity).should.not.be.ok;
 ```
 
 isUndefined(Number(1)) should be false.
 
 ```js
-typeChecker.isUndefined(Number(1)).should.not.be.ok;
+check.isUndefined(Number(1)).should.not.be.ok;
 ```
 
 isUndefined(NaN) should be false.
 
 ```js
-typeChecker.isUndefined(NaN).should.not.be.ok;
+check.isUndefined(NaN).should.not.be.ok;
 ```
 
 isUndefined("") should be false.
 
 ```js
-typeChecker.isUndefined("").should.not.be.ok;
+check.isUndefined("").should.not.be.ok;
 ```
 
 isUndefined("bla") should be false.
 
 ```js
-typeChecker.isUndefined("bla").should.not.be.ok;
+check.isUndefined("bla").should.not.be.ok;
 ```
 
 isUndefined(typeof 1) should be false.
 
 ```js
-typeChecker.isUndefined(typeof 1).should.not.be.ok;
+check.isUndefined(typeof 1).should.not.be.ok;
 ```
 
 isUndefined("abc") should be false.
 
 ```js
-typeChecker.isUndefined("abc").should.not.be.ok;
+check.isUndefined("abc").should.not.be.ok;
 ```
 
 isUndefined(true) should be false.
 
 ```js
-typeChecker.isUndefined(true).should.not.be.ok;
+check.isUndefined(true).should.not.be.ok;
 ```
 
 isUndefined(false) should be false.
 
 ```js
-typeChecker.isUndefined(false).should.not.be.ok;
+check.isUndefined(false).should.not.be.ok;
 ```
 
 isUndefined(Boolean(true)) should be false.
 
 ```js
-typeChecker.isUndefined(Boolean(true)).should.not.be.ok;
+check.isUndefined(Boolean(true)).should.not.be.ok;
 ```
 
 isUndefined(Boolean(false)) should be false.
 
 ```js
-typeChecker.isUndefined(Boolean(false)).should.not.be.ok;
+check.isUndefined(Boolean(false)).should.not.be.ok;
 ```
 
 isUndefined( new Boolean(true)) should be false.
 
 ```js
-typeChecker.isUndefined(Boolean( new Boolean(true))).should.not.be.ok;
+check.isUndefined(Boolean( new Boolean(true))).should.not.be.ok;
 ```
 
 isUndefined(null) should be false.
 
 ```js
-typeChecker.isUndefined(null).should.not.be.ok;
+check.isUndefined(null).should.not.be.ok;
 ```
 
 isUndefined({a:1}) should be false.
 
 ```js
-typeChecker.isUndefined({a:1}).should.not.be.ok;
+check.isUndefined({a:1}).should.not.be.ok;
 ```
 
 isUndefined(new Date()) should be false.
 
 ```js
-typeChecker.isUndefined(new Date()).should.not.be.ok;
+check.isUndefined(new Date()).should.not.be.ok;
 ```
 
 isUndefined(function(){}) should be false.
 
 ```js
-typeChecker.isUndefined(function(){}).should.not.be.ok;
+check.isUndefined(function(){}).should.not.be.ok;
 ```
 
 isUndefined(Math.sin) should be false.
 
 ```js
-typeChecker.isUndefined(Math.sin).should.not.be.ok;
+check.isUndefined(Math.sin).should.not.be.ok;
 ```
 
 isUndefined([1, 2, 4]) should be false.
 
 ```js
-typeChecker.isUndefined([1, 2, 4]).should.not.be.ok;
+check.isUndefined([1, 2, 4]).should.not.be.ok;
 ```
 
 
