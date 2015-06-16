@@ -1,0 +1,44 @@
+{
+  "name": "type-check",
+  "version": "1.0.0",
+  "description": "Check if the given value is of a specific type.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "should": "^6.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha -R spec test\\**.js",
+    "testUnix": "mocha -R spec test/**.js"
+  },
+  "keywords": [
+    "check",
+    "type",
+    "typeof",
+    "isArray",
+    "isNumber",
+    "isObject",
+    "isNull",
+    "isUndefined",
+    "isNil",
+    "isBoolean",
+    "isString",
+    "array",
+    "number",
+    "object",
+    "null",
+    "undefined",
+    "nil",
+    "boolean",
+    "string"
+  ],
+  "author": "pmatzavin",
+  "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/pmatzavin/type-check.git"
+  }
+}
