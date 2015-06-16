@@ -3,22 +3,33 @@ var typeChecker = require('./../index');
 
 describe('function isArray()', function () {
     describe('returns true: ', function () {
-
+        it('isArray([]) should be true', function () {
+            typeChecker.isArray([]).should.be.ok;
+        });
+        it('isArray([1]) should be true', function () {
+            typeChecker.isArray([1]).should.be.ok;
+        });
+        it('isArray([new Array()]) should be true', function () {
+            typeChecker.isArray([new Array()]).should.be.ok;
+        });
+        it('isArray([Array.prototype]) should be true', function () {
+            typeChecker.isArray([Array.prototype]).should.be.ok;
+        });
     });
     describe('returns false: ', function () {
-        it('isArray(37) should be true', function () {
+        it('isArray(37) should be false', function () {
             typeChecker.isArray(37).should.not.be.ok;
         });
-        it('isArray(3.14) should be true', function () {
+        it('isArray(3.14) should be false', function () {
             typeChecker.isArray(3.14).should.not.be.ok;
         });
-        it('isArray(Math.LN2) should be true', function () {
+        it('isArray(Math.LN2) should be false', function () {
             typeChecker.isArray(Math.LN2).should.not.be.ok;
         });
-        it('isArray(Infinity) should be true', function () {
+        it('isArray(Infinity) should be false', function () {
             typeChecker.isArray(Infinity).should.not.be.ok;
         });
-        it('isArray(Number(1)) should be true', function () {
+        it('isArray(Number(1)) should be false', function () {
             typeChecker.isArray(Number(1)).should.not.be.ok;
         });
         it('isArray(NaN) should be false', function () {
@@ -36,20 +47,20 @@ describe('function isArray()', function () {
         it('isArray("abc") should be false', function () {
             typeChecker.isArray("abc").should.not.be.ok;
         });
-        it('isArray(true) should be false', function () {
-            typeChecker.isArray(true).should.not.be.ok;
+        it('isArray(false) should be false', function () {
+            typeChecker.isArray(false).should.not.be.ok;
         });
         it('isArray(false) should be false', function () {
             typeChecker.isArray(false).should.not.be.ok;
         });
-        it('isArray(Boolean(true)) should be false', function () {
-            typeChecker.isArray(Boolean(true)).should.not.be.ok;
+        it('isArray(Boolean(false)) should be false', function () {
+            typeChecker.isArray(Boolean(false)).should.not.be.ok;
         });
         it('isArray(Boolean(false)) should be false', function () {
             typeChecker.isArray(Boolean(false)).should.not.be.ok;
         });
-        it('isArray( new Boolean(true)) should be false', function () {
-            typeChecker.isArray(Boolean( new Boolean(true))).should.not.be.ok;
+        it('isArray( new Boolean(false)) should be false', function () {
+            typeChecker.isArray(Boolean( new Boolean(false))).should.not.be.ok;
         });
         it('isArray(undefined) should be false', function () {
             typeChecker.isArray(undefined).should.not.be.ok;
